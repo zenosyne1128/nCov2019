@@ -84,3 +84,15 @@ p <- ggplot(df, aes(time, as.numeric(rate),
   theme(axis.text.x = element_text(angle = 15, hjust = 1)) +
   labs(title = "Outbreak Rate Curves of Top 10 Countries Around the World \n ")
 print(p)
+
+ggplot(df, aes(time, as.numeric(rate),            #faceting
+                    group = country)) +
+  geom_point() + geom_line() +
+  facet_wrap(~country, ncol = 5) +          #5 columns
+  theme_bw() + theme(legend.position = 'none') +
+  xlab(NULL) + ylab(NULL) + 
+  scale_x_date(date_labels = "%Y-%m-%d",
+               limits = c(as.Date("2020-02-01"), as.Date("2020-03-27"))) +
+  coord_cartesian(ylim = c(0,1)) +                          
+  theme(axis.text.x = element_text(angle = 15, hjust = 1)) +
+  labs(title = "Outbreak Rate Curves of Top 10 Countries Around the World \n ")
