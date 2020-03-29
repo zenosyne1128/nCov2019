@@ -5,8 +5,8 @@ visualization for nCov2019
 the code mainly solve three problems
 1. draw dynamic geographic maps of global infection of nCov2019
 1. show outbreak trend curves of top ten countries around the world.
-![](top10trend.png = 200x150)
+<img src = 'top10trend.png' width = "200" height = "150">
 1. show change rate(accumulative confirm) of top ten countries around the world
-![](top10rate.png = 200x150)
+<img src = 'top10rate.png' width = "200" height = "150">
 ## data source:
 < https://github.com/GuangchuangYu/nCov2019/blob/master/README.md>
